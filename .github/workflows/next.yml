@@ -15,6 +15,9 @@ jobs:
       init-commands: |
         pnpm exec nx-cloud start-ci-run --stop-agents-after="build" --agent-count=3
       parallel-commands: |
+        pnpm exec nx-cloud record -- pnpm exec prettier --write .
+        pnpm exec nx-cloud record -- pnpm exec nx format:write
+        pnpm exec nx-cloud record -- pnpm exec prettier --check .
         pnpm exec nx-cloud record -- pnpm exec nx format:check
       parallel-commands-on-agents: |
         pnpm exec nx affected --target=lint --parallel=3
