@@ -8,7 +8,7 @@
   "devDependencies": {
     "@nrwl/nx-cloud": "latest",
     "@nrwl/workspace": "15.8.6",
-    "nx": "15.8.5",
+    "nx": "15.8.6",
     "prettier": "^2.6.2"
   }
 }
